@@ -1,6 +1,5 @@
-# Developed by : Shakthivel v
+# Developed By : Shakthivel v
 # Register No : 24901278
-
 
 ### SYNCHRONOUS-UP-COUNTER
 
@@ -31,7 +30,6 @@ The next flip-flop need only “recognize” that the first flip-flop’s Q outp
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
 
 **Procedure**
-``````
 1.Initialize the shift register to a known state (e.g., all zeros).
 
 2.Input a bit serially into the shift register.
@@ -40,11 +38,10 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 4.Output the shifted bit from the last stage of the register.
 
-5.Repeat steps 2-4 for each bit you want to input and shift
-```
+5.Repeat steps 2-4 for each bit you want to input and shift.
+/* write all the steps invloved */
 
-
-**Program**
+**PROGRAM**
 ```
 module exp11 (
     input clk,    // Clock signal
@@ -71,7 +68,8 @@ module exp11 (
     assign j[3] = q[0] & q[1] & q[2]; // Fourth flip-flop toggles on q[2:0] high
     assign k[3] = q[0] & q[1] & q[2];
     assign t[3] = q[3];
-  // Instantiate 4 JK flip-flops
+
+    // Instantiate 4 JK flip-flops
     jk_flipflop jk0 (.clk(clk), .rst(rst), .j(j[0]), .k(k[0]), .q(q[0]));
     jk_flipflop jk1 (.clk(clk), .rst(rst), .j(j[1]), .k(k[1]), .q(q[1]));
     jk_flipflop jk2 (.clk(clk), .rst(rst), .j(j[2]), .k(k[2]), .q(q[2]));
@@ -101,6 +99,11 @@ module jk_flipflop (
     end
 endmodule
 ```
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+
+Developed by: Ragul.K RegisterNumber:24006231
+*/
+
 **RTL LOGIC UP COUNTER**
 ![exp11-rtl](https://github.com/user-attachments/assets/7cc4337f-8ac1-45fb-aa7c-3c6016ec1165)
 
@@ -109,9 +112,12 @@ endmodule
 
 ![exp11-time](https://github.com/user-attachments/assets/3b0db745-12c1-4a19-a4ce-e8bbe34f6e40)
 
+
 **TRUTH TABLE**
 
 ![exp11-true](https://github.com/user-attachments/assets/4171cb45-c4b6-444d-b801-7162e0e6378f)
 
+
 **RESULTS**
+
 Thus the program executed successfully
