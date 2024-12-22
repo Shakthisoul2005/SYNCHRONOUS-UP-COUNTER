@@ -44,7 +44,7 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 ```
 
 
-**PROGRAM**
+**Program**
 ```
 module exp11 (
     input clk,    // Clock signal
